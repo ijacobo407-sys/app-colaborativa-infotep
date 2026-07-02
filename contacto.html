@@ -1,0 +1,36 @@
+# ===================================================
+# Tarea: Calculadora con Menú
+# Participante A: Condicionales (menú y operaciones)
+# Participante B: Loops (repetición y validación)
+# ===================================================
+
+def mostrar_menu():
+    print("\n--- CALCULADORA ---")
+    print("1. Sumar")
+    print("2. Restar")
+    print("3. Multiplicar")
+    print("4. Dividir")
+    print("5. Salir")
+
+# --- PARTE DE A: condicionales para elegir la operación ---
+def realizar_operacion(opcion, num1, num2):
+    if opcion == "1":
+        resultado = num1 + num2
+        print(f"Resultado: {num1} + {num2} = {resultado}")
+    elif opcion == "2":
+        resultado = num1 - num2
+        print(f"Resultado: {num1} - {num2} = {resultado}")
+    elif opcion == "3":
+        resultado = num1 * num2
+        print(f"Resultado: {num1} * {num2} = {resultado}")
+    elif opcion == "4":
+        if num2 == 0:
+            print("Error: no se puede dividir entre cero.")
+        else:
+            resultado = num1 / num2
+            print(f"Resultado: {num1} / {num2} = {resultado}")
+    else:
+        print("Opción inválida.")
+
+
+        
