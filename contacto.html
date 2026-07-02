@@ -33,4 +33,28 @@ def realizar_operacion(opcion, num1, num2):
         print("Opción inválida.")
 
 
-        
+        def main():
+    while True:
+        mostrar_menu()
+        opcion = input("Elige una opción (1-5): ")
+
+        if opcion == "5":
+            print("Programa finalizado. ¡Adiós!")
+            break
+
+        if opcion not in ["1", "2", "3", "4"]:
+            print("Opción no válida, intenta de nuevo.")
+            continue
+
+        # Validación de números con loop
+        while True:
+            try:
+                num1 = float(input("Ingresa el primer número: "))
+                num2 = float(input("Ingresa el segundo número: "))
+                break
+            except ValueError:
+                print("Error: debes ingresar solo números.")
+
+        realizar_operacion(opcion, num1, num2)
+
+main()
